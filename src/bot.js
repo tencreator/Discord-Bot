@@ -49,7 +49,6 @@ const client = new Discord.Client({
     restTimeOffset: 0
 });
 
-
 const clientID = process.env.SPOTIFY_CLIENT_ID;
 const clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 if (clientID && clientSecret) {
@@ -66,16 +65,11 @@ if (clientID && clientSecret) {
         ],
         nodes: [
             {
-                host: process.env.LAVALINK_HOST || "lava.link",
-                port: parseInt(process.env.LAVALINK_PORT) || 80,
-                password: process.env.LAVALINK_PASSWORD || "CorwinDev",
-                secure: Boolean(process.env.LAVALINK_SECURE) || false
-            },
-            {
-                host: "lavalink.techpoint.world",
-                port: 80,
-                password: "techpoint"
-            },
+                host: process.env.LAVALINK_HOST || "192.168.10.120",
+                port: parseInt(process.env.LAVALINK_PORT) || 9046,
+                password: process.env.LAVALINK_PASSWORD || "TenSuperb626@27",
+                secure: false
+            }
         ],
         send(id, payload) {
             const guild = client.guilds.cache.get(id);
@@ -93,10 +87,10 @@ if (clientID && clientSecret) {
         ],
         nodes: [
             {
-                host: process.env.LAVALINK_HOST || "lava.link",
-                port: parseInt(process.env.LAVALINK_PORT) || 80,
-                password: process.env.LAVALINK_PASSWORD || "CorwinDev",
-                secure: Boolean(process.env.LAVALINK_SECURE) || false
+                host: process.env.LAVALINK_HOST || "192.168.10.120",
+                port: parseInt(process.env.LAVALINK_PORT) || 9046,
+                password: process.env.LAVALINK_PASSWORD || "TenSuperb626@27",
+                secure: false
             },
         ],
         send(id, payload) {
@@ -130,6 +124,7 @@ if (process.env.WEBHOOK_ID && process.env.WEBHOOK_TOKEN) {
 }
 
 client.commands = new Discord.Collection();
+client.streams = new Discord.Collection();
 client.playerManager = new Map();
 client.triviaManager = new Map();
 client.queue = new Map();

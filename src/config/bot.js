@@ -9,8 +9,18 @@ module.exports = {
         id: process.env.DISCORD_ID,
         prefix: '!',
         footer: `© Corwin 2021 - ${new Date().getFullYear()}`, 
-        botInvite: `https://discord.com/oauth2/authorize?&client_id=840212110817755157&scope=applications.commands+bot&permissions=8`,
+        botInvite: `https://discord.com/oauth2/authorize?&client_id=${process.env.DISCORD_ID}&scope=applications.commands+bot&permissions=8`,
         serverInvite: "https://discord.gg/qHXxpQKC2H",
+    },
+
+    twitch: {
+        client_id: process.env.TWITCH_CLIENT_ID,
+        client_secret: process.env.TWITCH_CLIENT_SECRET,
+        streamer: process.env.TWITCH_STREAMER,
+        embed_color: process.env.TWITCH_EMBED_CLR,
+        live_message: process.env.TWITCH_LIVE_MSG,
+        offline_message: process.env.TWITCH_OFFLINE_MSG,
+        channel_id: process.env.TWITCH_CHANNEL
     },
 
     wordList: `Airplane
@@ -1064,5 +1074,3 @@ young
 your
 yourself`
 }
-
- 
