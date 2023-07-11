@@ -1,5 +1,5 @@
 const { twitch } = require('../../config/bot')
-const { Stream } = require('../../database/models/twitchStream');
+const Stream = require('../../database/models/twitchStream');
 const chalk = require('chalk');
 const fetch = require('node-fetch');
 const request = require('request');
