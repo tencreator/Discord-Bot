@@ -8,9 +8,9 @@ module.exports = {
     discord: {
         id: process.env.DISCORD_ID,
         prefix: '!',
-        footer: `© Corwin 2021 - ${new Date().getFullYear()}`, 
+        footer: `© TenCreator 2023 - ${new Date().getFullYear()}`, 
         botInvite: `https://discord.com/oauth2/authorize?&client_id=${process.env.DISCORD_ID}&scope=applications.commands+bot&permissions=8`,
-        serverInvite: "https://discord.gg/qHXxpQKC2H",
+        serverInvite: "https://discord.gg/pSqmJScS6v",
     },
 
     twitch: {
